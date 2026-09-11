@@ -58,6 +58,8 @@ a{color:var(--accent)}
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 .diagram{width:100%;height:auto;display:block}
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.scroll-x .diagram.wide{min-width:680px}
 .diagram text{font-family:var(--mono);fill:var(--muted)}
 .diagram .t{fill:var(--text);font-weight:600}
 .diagram .a{fill:var(--accent)}
@@ -154,6 +156,9 @@ a{color:var(--accent)}
   .grid-2{grid-template-columns:1fr} .section{padding-block:64px} body{font-size:16px}
   .lead{font-size:17px} .hero{padding-block:44px 56px} .hero-combo{font-size:17px}
   .hero-side{grid-template-columns:1fr;justify-items:center}
+  .hero-tiles{grid-template-columns:1fr 1fr;gap:12px}
+  .tile{padding:14px}
+  .tile-n{font-size:26px}
   .brand .sub{display:none}
 }
 @media (prefers-reduced-motion:reduce){
