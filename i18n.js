@@ -11,11 +11,8 @@ window.I18N = {
     "hero.eyebrow": "Healthcare integration · Data · Infrastructure",
     "hero.role": "Healthcare integration engineer (HL7/FHIR) · Data platforms & observability",
     "hero.combo": "I validate clinical messaging in hospitals running in production, I hold a master's in BI and Big Data, and I run my own infrastructure with full observability. Three things that rarely come together.",
-    "hero.l1": "Today I work at Dedalus validating and analysing the HL7/FHIR messaging of a real-time clinical platform running in hospitals.",
-    "hero.l2": "I come from systems and infrastructure: Linux, Docker, Proxmox, databases and observability. I understand problems end to end and I build the tools that are missing.",
-    "hero.l3": "Right now: Kubernetes (CKA) and data platforms with dbt and Dagster.",
     "hero.mail": "Email",
-    "tile.sites": "physical sites joined by VPN",
+    "tile.sites": "full control of my servers from my phone, wherever I am",
     "tile.services": "containerised services, operated remotely",
     "tile.alerts": "alert rules that page my phone",
     "tile.series": "metric series from my PC alone",
@@ -23,7 +20,7 @@ window.I18N = {
     "linux.title": "Linux is my system",
     "linux.lead": "I have used Linux daily for years: CachyOS on the desktop, Debian and Ubuntu on the servers. The terminal, systemd, networking and containers are my natural environment, not just another tool. My homelab is the proof: two physical sites I run as if they were production.",
     "linux.f1.t": "Two sites, one network",
-    "linux.f1.d": "Proxmox VE with LXC containers at one site and an Orange Pi 5 (ARM) at another, 300 km away, joined by WireGuard and managed almost 100% remotely, from my phone when needed. Nothing exposed to the Internet except the VPN port.",
+    "linux.f1.d": "Proxmox VE with LXC containers at one site and an Orange Pi 5 (ARM) at another, 300 km away, joined by WireGuard. Wherever I am, I have full control from my phone: VPN, SSH, Wake-on-LAN and dashboards. Nothing exposed to the Internet except the VPN port.",
     "linux.f2.t": "My own network",
     "linux.f2.d": "DNS with AdGuard Home and unbound, a reverse proxy with an internal domain and certificates, and an independent break-glass VPN on a Raspberry Pi in case everything else goes down.",
     "linux.f3.t": "The container as the unit of work",
@@ -44,7 +41,7 @@ window.I18N = {
     "linux.svg.ws": "Workstation",
     "linux.svg.ha": "Home automation",
     "linux.svg.link": "WireGuard · 300 km",
-    "linux.svg.phone": "VPN from my phone: SSH, WoL and dashboards",
+    "linux.svg.phone": "Full control from my phone, wherever I am",
     "met.eyebrow": "Observability",
     "met.title": "Observability for my own machines, built like a production service",
     "met.lead": "Every machine I own exports metrics and logs to a central Prometheus. Thresholds are tuned with real history and alerts reach my phone. No commercial agents: what did not exist, I wrote.",
@@ -86,7 +83,7 @@ window.I18N = {
     "ia.f4.d": "The model picks the tool and never generates SQL. A read-only agent over company data that refuses to start without declared GDPR compliance. Hosted or local model chosen per case, not by fashion.",
     "pr.eyebrow": "Projects",
     "pr.title": "Three things I have built end to end",
-    "pr.lead": "Code is private for now. What matters is how they are built and the decisions behind them.",
+    "pr.lead": "Private repos: there are real clients and real data behind them. I will walk you through them on a call. What matters is how they are built and the decisions behind them.",
     "pr.acr.state": "in trial",
     "pr.ft.state": "in development",
     "pr.roo.state": "demo",
@@ -145,6 +142,7 @@ window.I18N = {
     "edu.l": "Languages: Spanish native · English B2",
     "ct.eyebrow": "Contact",
     "ct.title": "If you need someone who understands data from the hospital to the dashboard, let's talk.",
-    "ft.made": "Hand-made with HTML, CSS and JS. No frameworks."
+    "ft.made": "Hand-made with HTML, CSS and JS. No frameworks.",
+    "hero.now": "Kubernetes (CKA) · data platforms with dbt and Dagster"
   }
 };

@@ -71,6 +71,7 @@ a{color:var(--accent)}
 .quote{font-size:clamp(20px,2.4vw,26px);line-height:1.4;font-weight:500;border-left:3px solid var(--accent);padding:6px 0 6px 22px;max-width:860px;margin:6px 0 40px;color:var(--text)}
 .quote em{font-style:normal;color:var(--accent)}
 .lbl{display:inline-block;font:600 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-right:8px;min-width:78px}
+.lbl-now::before{content:"Ahora"} .is-en .lbl-now::before{content:"Now"}
 .lbl-what::before{content:"Qué"} .lbl-how::before{content:"Cómo"} .lbl-why::before{content:"Decisión"}
 .is-en .lbl-what::before{content:"What"} .is-en .lbl-how::before{content:"How"} .is-en .lbl-why::before{content:"Decision"}
 
@@ -96,7 +97,10 @@ a{color:var(--accent)}
 .hero-lines{list-style:none;color:#c9d6e0;font-size:16px}
 .hero-lines li{position:relative;padding-left:18px;margin-bottom:8px}
 .hero-lines li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.hero-now{margin-top:22px;color:#c9d6e0;font-size:16px}
+.hero-now .lbl{min-width:auto}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero-chips{margin-top:22px}
 .hero-side{display:grid;gap:18px;justify-items:center}
 .hero-photo{width:176px;height:176px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);box-shadow:0 0 0 10px rgba(95,222,208,.08),0 20px 50px rgba(0,0,0,.35)}
 .hero-tiles{width:100%}
