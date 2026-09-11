@@ -123,7 +123,86 @@
       </div>
     </div>
   </section>
-  <section id="metricas"></section>
+  <section id="metricas" class="section">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="met.eyebrow">Observabilidad</p>
+      <h2 class="title" data-i18n="met.title">La observabilidad de mi propio equipo, montada como la de un servicio en producción</h2>
+      <p class="lead" data-i18n="met.lead">Cada máquina que tengo exporta métricas y logs a un Prometheus central. Los umbrales se ajustan con historial real y las alertas llegan al móvil. Sin agentes comerciales: lo que no existía, lo escribí.</p>
+      <div class="panel reveal">
+        <div class="panel-head"><span class="dot"></span><span data-i18n="met.head">pipeline · pull cada 15 s · retención 30 días</span></div>
+        <div class="panel-body">
+          <svg class="diagram" viewBox="0 0 1000 300" role="img" aria-label="Pipeline de métricas: workstation, exporters, Prometheus, Grafana, Loki, Alertmanager y ntfy">
+            <rect class="box" x="20" y="110" width="140" height="80" rx="10"/>
+            <text class="t" x="34" y="140" font-size="13" data-i18n="met.n1">Workstation</text>
+            <text x="34" y="160" font-size="11" data-i18n="met.n1s">CachyOS · GPU</text>
+            <text x="34" y="178" font-size="11" data-i18n="met.n1t">systemd units</text>
+
+            <rect class="box" x="200" y="90" width="200" height="120" rx="10"/>
+            <text class="t" x="214" y="118" font-size="13" data-i18n="met.n2">4 exporters</text>
+            <text x="214" y="140" font-size="11" data-i18n="met.n2s">node · NVIDIA</text>
+            <text x="214" y="158" font-size="11" class="a" data-i18n="met.n2b">MangoHud* · Lutris*</text>
+            <text x="214" y="184" font-size="11" data-i18n="met.n2c">promtail → logs</text>
+
+            <rect class="box" x="440" y="110" width="180" height="80" rx="10"/>
+            <text class="t" x="454" y="138" font-size="13">Prometheus</text>
+            <text x="454" y="158" font-size="11" data-i18n="met.n3s">Orange Pi 5 · pull 15 s</text>
+            <text x="454" y="176" font-size="11" data-i18n="met.n3t">retención 30 d</text>
+
+            <rect class="box" x="660" y="40" width="170" height="58" rx="10"/>
+            <text class="t" x="674" y="64" font-size="13">Grafana</text>
+            <text x="674" y="84" font-size="11" data-i18n="met.n4s">27 paneles</text>
+
+            <rect class="box" x="660" y="118" width="170" height="50" rx="10"/>
+            <text class="t" x="674" y="140" font-size="13">Loki</text>
+            <text x="674" y="158" font-size="11" data-i18n="met.n5s">logs</text>
+
+            <rect class="box" x="660" y="190" width="170" height="80" rx="10"/>
+            <text class="t" x="674" y="214" font-size="13">Alertmanager</text>
+            <text x="674" y="234" font-size="11" data-i18n="met.n6s">térmicas · VRAM · disco</text>
+            <text x="674" y="252" font-size="11" data-i18n="met.n6t">throttling · OOM</text>
+
+            <rect class="box" x="870" y="190" width="110" height="80" rx="10"/>
+            <text class="t" x="884" y="214" font-size="13">ntfy</text>
+            <text x="884" y="234" font-size="11" data-i18n="met.n7s">→ móvil</text>
+            <g class="ico" transform="translate(948,222)"><rect x="0" y="0" width="20" height="34" rx="4"/><path d="M7 29h6"/></g>
+
+            <path class="wire" d="M160 150 H200"/><path class="flow" d="M160 150 H200"/>
+            <path class="wire" d="M400 150 H440"/><path class="flow" d="M400 150 H440"/>
+            <path class="wire" d="M620 140 C 640 140, 640 69, 660 69"/><path class="flow" d="M620 140 C 640 140, 640 69, 660 69"/>
+            <path class="wire" d="M620 160 C 640 160, 640 230, 660 230"/><path class="flow" d="M620 160 C 640 160, 640 230, 660 230"/>
+            <path class="wire" d="M400 186 C 430 186, 400 245, 470 245 H 630 C 655 245, 645 143, 660 143"/><path class="flow" d="M400 186 C 430 186, 400 245, 470 245 H 630 C 655 245, 645 143, 660 143"/>
+            <path class="wire" d="M830 230 H870"/><path class="flow" d="M830 230 H870"/>
+            <text x="20" y="290" font-size="11" data-i18n="met.note">* exporters propios en Python</text>
+          </svg>
+        </div>
+      </div>
+      <div class="grid-3" style="margin-top:18px">
+        <article class="panel reveal">
+          <div class="panel-head"><span class="ttl" data-i18n="met.p1.t">Dos exporters escritos por mí</span></div>
+          <div class="panel-body"><p data-i18n="met.p1.d">MangoHud escribe un CSV; un script Python lo relee cada dos segundos y expone FPS, frametime, temperaturas y consumo como métricas Prometheus con label por aplicación. Otro exporter lee la biblioteca de Lutris. Los dos corren como unidades systemd.</p></div>
+        </article>
+        <article class="panel reveal">
+          <div class="panel-head"><span class="ttl" data-i18n="met.p2.t">Análisis que importan</span></div>
+          <div class="panel-body"><p data-i18n="met.p2.d">Percentiles bajos de FPS (P1 y P0.1) en ventana rolling, FPS por vatio y umbrales de alerta ajustados con semanas de historial, no a ojo.</p></div>
+        </article>
+        <article class="panel reveal">
+          <div class="panel-head"><span class="ttl" data-i18n="met.p3.t">Una lección concreta</span></div>
+          <div class="panel-body"><p data-i18n="met.p3.d">La alerta de temperatura del NVMe solo mira el sensor Composite: los sensores auxiliares disparaban falsos positivos. Está documentado para no volver a caer.</p></div>
+        </article>
+      </div>
+      <div class="panel reveal shots" style="margin-top:18px">
+        <div class="panel-head"><span class="dot"></span><span data-i18n="met.shot">grafana · capturas reales de mis dashboards</span></div>
+        <figure>
+          <img src="assets/grafana-cpu.png" alt="Paneles de Grafana con carga de CPU global, por core y por modo, y temperaturas por sensor" loading="lazy" width="1392" height="602">
+          <figcaption data-i18n="met.shot1">CPU: carga global, por core y por modo, y temperaturas por sensor, con las líneas de umbral de alerta</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/grafana-gpu.png" alt="Paneles de Grafana con VRAM, temperatura, consumo y ventilador de la GPU" loading="lazy" width="1408" height="181">
+          <figcaption data-i18n="met.shot2">GPU: VRAM asignada, temperatura, consumo y ventilador, con los umbrales de alerta pintados</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
   <section id="ia"></section>
   <section id="proyectos"></section>
   <section id="experiencia"></section>
