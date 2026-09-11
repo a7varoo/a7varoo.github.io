@@ -64,7 +64,65 @@
       </div>
     </div>
   </section>
-  <section id="linux"></section>
+  <section id="linux" class="section">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="linux.eyebrow">Base</p>
+      <h2 class="title" data-i18n="linux.title">Linux es mi sistema</h2>
+      <p class="lead" data-i18n="linux.lead">Uso Linux a diario desde hace años: CachyOS en el escritorio, Debian y Ubuntu en los servidores. Terminal, systemd, redes y contenedores son mi entorno natural, no una herramienta más. Mi homelab es la prueba: dos sitios físicos que opero como si fueran producción.</p>
+      <div class="grid-2">
+      <article class="panel feature reveal">
+        <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><span class="ttl" data-i18n="linux.f1.t">Dos sitios, una red</span></div>
+        <div class="panel-body"><p data-i18n="linux.f1.d">Proxmox VE con contenedores LXC en un sitio y una Orange Pi 5 (ARM) en otro, a 300 km, unidos por WireGuard y gestionados casi al 100 % en remoto, desde el móvil si hace falta. Nada expuesto a Internet salvo el puerto de la VPN.</p></div>
+      </article>
+      <article class="panel feature reveal">
+        <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5l-5.5 5M12 11.5l5.5 5"/></svg><span class="ttl" data-i18n="linux.f2.t">Red propia</span></div>
+        <div class="panel-body"><p data-i18n="linux.f2.d">DNS con AdGuard Home y unbound, reverse proxy con dominio interno y certificados, y una VPN de emergencia independiente en una Raspberry Pi por si el resto se cae.</p></div>
+      </article>
+      <article class="panel feature reveal">
+        <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 7.5v9L12 21l9-4.5v-9L12 3z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg><span class="ttl" data-i18n="linux.f3.t">El contenedor como unidad de trabajo</span></div>
+        <div class="panel-body"><p data-i18n="linux.f3.d">Docker Compose organizado por stacks temáticos (red, monitorización, datos, media, domótica), servicios propios en FastAPI y unidades systemd escritas a mano para lo que no es un contenedor.</p></div>
+      </article>
+      <article class="panel feature reveal">
+        <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 7.6 8 9 4.6-1.4 8-4.5 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg><span class="ttl" data-i18n="linux.f4.t">Lo que se despliega, se recupera</span></div>
+        <div class="panel-body"><p data-i18n="linux.f4.d">Backups diarios con Proxmox Backup Server y restore probado de extremo a extremo, réplica offsite por rsync sobre la VPN con clave SSH enjaulada, y watchdogs con Wake-on-LAN que levantan lo que se cae.</p></div>
+      </article>
+      </div>
+      <div class="panel reveal" style="margin-top:18px">
+        <div class="panel-head"><span class="dot"></span><span data-i18n="linux.svg.head">topología · dos sitios · una red privada</span></div>
+        <div class="panel-body">
+          <svg class="diagram" viewBox="0 0 900 250" role="img" aria-label="Dos sitios unidos por WireGuard">
+            <rect class="box" x="20" y="30" width="330" height="150" rx="12"/>
+            <text class="t" x="40" y="58" font-size="14" data-i18n="linux.svg.site1">Casa 1 · Proxmox VE</text>
+            <g transform="translate(40,78)">
+              <rect class="box soft" x="0" y="0" width="130" height="36" rx="8"/><text x="12" y="23" font-size="12" data-i18n="linux.svg.lxc">8 LXC</text>
+              <rect class="box soft" x="0" y="46" width="130" height="36" rx="8"/><text x="12" y="69" font-size="12" data-i18n="linux.svg.pbs">Backups PBS</text>
+              <rect class="box soft" x="150" y="0" width="140" height="82" rx="8"/>
+              <text x="162" y="23" font-size="12" data-i18n="linux.svg.rpi">Raspberry Pi</text>
+              <text x="162" y="42" font-size="11" data-i18n="linux.svg.rpi2">DNS · proxy · WoL</text>
+              <text x="162" y="61" font-size="11" class="a" data-i18n="linux.svg.rpi3">VPN de emergencia</text>
+            </g>
+            <rect class="box" x="550" y="30" width="330" height="150" rx="12"/>
+            <text class="t" x="570" y="58" font-size="14" data-i18n="linux.svg.site2">Casa 2 · Orange Pi 5 (ARM)</text>
+            <g transform="translate(570,78)">
+              <rect class="box soft" x="0" y="0" width="176" height="82" rx="8"/>
+              <text x="12" y="23" font-size="12" data-i18n="linux.svg.opi">~31 contenedores</text>
+              <text x="12" y="42" font-size="11" data-i18n="linux.svg.opi2">Prometheus · Grafana</text>
+              <text x="12" y="61" font-size="11" data-i18n="linux.svg.opi3">DNS · proxy · réplica DR</text>
+              <rect class="box soft" x="188" y="0" width="102" height="36" rx="8"/><text x="199" y="23" font-size="12" data-i18n="linux.svg.ws">Workstation</text>
+              <rect class="box soft" x="188" y="46" width="102" height="36" rx="8"/><text x="199" y="69" font-size="12" data-i18n="linux.svg.ha">Domótica</text>
+            </g>
+            <path class="wire" d="M350 105 H550"/>
+            <path class="flow" d="M350 105 H550"/>
+            <text class="a" x="450" y="92" font-size="12" text-anchor="middle" data-i18n="linux.svg.link">WireGuard · 300 km</text>
+            <path class="wire" d="M450 105 V190"/>
+            <path class="flow" d="M450 190 V105"/>
+            <g class="ico" transform="translate(438,196)"><rect x="0" y="0" width="24" height="40" rx="5"/><path d="M9 34h6"/></g>
+            <text x="475" y="221" font-size="12" data-i18n="linux.svg.phone">VPN desde el móvil: SSH, WoL y dashboards</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="metricas"></section>
   <section id="ia"></section>
   <section id="proyectos"></section>
