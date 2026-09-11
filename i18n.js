@@ -81,7 +81,7 @@ window.I18N = {
     "ia.f2.t": "Connected tools (MCP)",
     "ia.f2.d": "The agent acts on Grafana, Home Assistant, ComfyUI and the browser, not only on files. I have written my own commands to review dashboards, check exporters and audit downloads before running them.",
     "ia.f3.t": "Local models",
-    "ia.f3.d": "On-prem RAG over HL7/FHIR guides with Qdrant, Ollama and Open WebUI, because the data is sensitive and cost and control matter. Voice cloning and transcription 100% local on my GPU. My own LoRA training pipeline with ComfyUI and RunPod, with tests and identity verification.",
+    "ia.f3.d": "On-prem RAG over HL7/FHIR guides with Qdrant, Ollama and Open WebUI, because the data is sensitive and cost and control matter. Fine-tuning of image models with ComfyUI, on my GPU or on RunPod when more power is needed.",
     "ia.f4.t": "Structured output and tool calling",
     "ia.f4.d": "The model picks the tool and never generates SQL. A read-only agent over company data that refuses to start without declared GDPR compliance. Hosted or local model chosen per case, not by fashion.",
     "pr.eyebrow": "Projects",
