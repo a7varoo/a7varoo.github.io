@@ -72,6 +72,17 @@ window.I18N = {
     "met.p3.d": "The NVMe temperature alert only looks at the Composite sensor: the auxiliary sensors were firing false positives. It is documented so it never happens again.",
     "met.shot": "grafana · real screenshots of my dashboards",
     "met.shot1": "CPU: global, per-core and per-mode load, and per-sensor temperatures, with the alert threshold lines",
-    "met.shot2": "GPU: allocated VRAM, temperature, power draw and fan, with the alert thresholds drawn in"
+    "met.shot2": "GPU: allocated VRAM, temperature, power draw and fan, with the alert thresholds drawn in",
+    "ia.eyebrow": "Applied AI",
+    "ia.title": "AI as a teammate, not as autocomplete",
+    "ia.quote": "I don't use AI to type faster. I run it as a teammate with <em>memory, rules and tools</em>, and I keep the approval on the trade-offs.",
+    "ia.f1.t": "Agents with guardrails",
+    "ia.f1.d": "Every repository carries operating rules and persistent memory, so the agent starts with context instead of re-deriving it. Scoped access to the machine and end-to-end validation with a real browser, not just “it compiles”.",
+    "ia.f2.t": "Connected tools (MCP)",
+    "ia.f2.d": "The agent acts on Grafana, Home Assistant, ComfyUI and the browser, not only on files. I have written my own commands to review dashboards, check exporters and audit downloads before running them.",
+    "ia.f3.t": "Local models",
+    "ia.f3.d": "On-prem RAG over HL7/FHIR guides with Qdrant, Ollama and Open WebUI, because the data is sensitive and cost and control matter. Voice cloning and transcription 100% local on my GPU. My own LoRA training pipeline with ComfyUI and RunPod, with tests and identity verification.",
+    "ia.f4.t": "Structured output and tool calling",
+    "ia.f4.d": "The model picks the tool and never generates SQL. A read-only agent over company data that refuses to start without declared GDPR compliance. Hosted or local model chosen per case, not by fashion."
   }
 };

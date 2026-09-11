@@ -203,7 +203,34 @@
       </div>
     </div>
   </section>
-  <section id="ia"></section>
+  <section id="ia" class="section">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="ia.eyebrow">IA aplicada</p>
+      <h2 class="title" data-i18n="ia.title">La IA como compañero de equipo, no como autocompletado</h2>
+      <blockquote class="quote" data-i18n="ia.quote">No uso la IA para escribir más rápido. La ejecuto como un compañero de equipo con <em>memoria, reglas y herramientas</em>, y me quedo con la aprobación de los tradeoffs.</blockquote>
+      <div class="grid-2">
+        <article class="panel reveal">
+          <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 7.6 8 9 4.6-1.4 8-4.5 8-9V6l-8-3z"/><path d="M12 8v4M12 15h.01"/></svg><span class="ttl" data-i18n="ia.f1.t">Agentes con guardarraíles</span></div>
+          <div class="panel-body"><p data-i18n="ia.f1.d">Cada repositorio lleva reglas operativas y memoria persistente, así que el agente arranca con contexto en vez de rederivarlo. Acceso acotado a la máquina y validación de extremo a extremo con un navegador real, no solo “compila”.</p></div>
+        </article>
+        <article class="panel reveal">
+          <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/><circle cx="12" cy="12" r="3"/><path d="M12 5v4M12 15v4M5 12h4M15 12h4"/></svg><span class="ttl" data-i18n="ia.f2.t">Herramientas conectadas (MCP)</span></div>
+          <div class="panel-body"><p data-i18n="ia.f2.d">El agente actúa sobre Grafana, Home Assistant, ComfyUI y el navegador, no solo sobre ficheros. Me he escrito comandos propios para revisar dashboards, comprobar exporters y auditar descargas antes de ejecutarlas.</p></div>
+        </article>
+        <article class="panel reveal">
+          <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM2 10h2M2 14h2M20 10h2M20 14h2M10 2v2M14 2v2M10 20v2M14 20v2"/></svg><span class="ttl" data-i18n="ia.f3.t">Modelos en local</span></div>
+          <div class="panel-body"><p data-i18n="ia.f3.d">RAG on-prem de guías HL7/FHIR con Qdrant, Ollama y Open WebUI, porque los datos son sensibles y el coste y el control importan. Clonación de voz y transcripción 100 % locales en mi GPU. Un pipeline propio de entrenamiento de LoRAs con ComfyUI y RunPod, con tests y verificación de identidad.</p></div>
+        </article>
+        <article class="panel reveal">
+          <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/><path d="m17 15 2 2 4-4"/></svg><span class="ttl" data-i18n="ia.f4.t">Salida estructurada y tool-calling</span></div>
+          <div class="panel-body"><p data-i18n="ia.f4.d">El modelo elige la herramienta y nunca genera SQL. Un agente de solo lectura sobre datos de empresa que no arranca sin conformidad RGPD declarada. Elegir modelo hosted o local según el caso, no por moda.</p></div>
+        </article>
+      </div>
+      <div class="chips" style="margin-top:22px">
+        <span class="chip">Ollama</span><span class="chip">Qdrant</span><span class="chip">Open WebUI</span><span class="chip">Anthropic SDK</span><span class="chip">MCP</span><span class="chip">Playwright</span><span class="chip">ComfyUI</span><span class="chip">RunPod</span><span class="chip">pgvector</span><span class="chip">Instructor / Pydantic</span>
+      </div>
+    </div>
+  </section>
   <section id="proyectos"></section>
   <section id="experiencia"></section>
   <section id="formacion"></section>
