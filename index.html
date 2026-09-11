@@ -270,11 +270,91 @@
       </div>
     </div>
   </section>
-  <section id="experiencia"></section>
-  <section id="formacion"></section>
-  <section id="contacto"></section>
+  <section id="experiencia" class="section">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="exp.eyebrow">Experiencia</p>
+      <h2 class="title" data-i18n="exp.title">Dónde he trabajado</h2>
+      <ul class="timeline">
+        <li class="reveal">
+          <div class="tl-date" data-i18n="exp.d.date">feb 2025 – actualidad · Málaga</div>
+          <h3 data-i18n="exp.d.role">Ingeniero de integración · Dedalus</h3>
+          <p class="tl-ctx" data-i18n="exp.d.ctx">Formo parte del equipo de <a href="https://www.dedalus.com/global/en/our-offer/products/dedalus-command-centre/" target="_blank" rel="noopener">Command Center</a>, la plataforma de inteligencia operativa en tiempo real de Dedalus: una vista en vivo de urgencias, plantas y quirófanos que se integra con la historia clínica y el resto de sistemas del hospital, con alertas y previsión de demanda. Desplegada en hospitales dentro y fuera de España.</p>
+          <ul>
+            <li data-i18n="exp.d.1">Verifico que la mensajería HL7 se procesa correctamente en el motor de integración y se convierte en recursos FHIR indexados en OpenSearch, analizando trazas en Grafana.</li>
+            <li data-i18n="exp.d.2">Reviso mapeos y circuitos de integración, valido nuevas versiones e integraciones frente a requisitos y reporto incidencias.</li>
+            <li data-i18n="exp.d.3">Construí dos herramientas internas en Python/FastAPI que uso a diario para validar perfiles HL7 e inspeccionar y transformar mensajería siguiendo trazas FHIR.</li>
+          </ul>
+        </li>
+        <li class="reveal">
+          <div class="tl-date" data-i18n="exp.a.date">jul 2023 – feb 2025 · Málaga</div>
+          <h3 data-i18n="exp.a.role">Colaborador técnico (sistemas y domótica) · ACR Ingenierías</h3>
+          <ul>
+            <li data-i18n="exp.a.1">Despliegue y administración de Home Assistant y un broker MQTT para integrar dispositivos.</li>
+            <li data-i18n="exp.a.2">Administración de sistemas con Proxmox, contenedores con Docker y ETL con SQL y Python. Después, el proyecto ACR management.</li>
+          </ul>
+        </li>
+        <li class="reveal">
+          <div class="tl-date" data-i18n="exp.c.date">nov 2020 – mar 2023 · Ceuta</div>
+          <h3 data-i18n="exp.c.role">Administrativo · Cemacon</h3>
+          <ul>
+            <li data-i18n="exp.c.1">Además de las funciones administrativas, asumí las tareas técnicas: automatización con Python, Raspberry Pi, Docker y bases de datos.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="formacion" class="section">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="edu.eyebrow">Formación</p>
+      <h2 class="title" data-i18n="edu.title">De ADE a Big Data, con la infraestructura en medio</h2>
+      <div class="grid-2">
+        <article class="panel edu reveal">
+          <div class="panel-head"><span class="ttl" data-i18n="edu.h1">Estudios</span></div>
+          <div class="panel-body">
+            <div class="item">
+              <h3 data-i18n="edu.m.t">Máster en Inteligencia de Negocio y Big Data Analytics</h3>
+              <div class="s" data-i18n="edu.m.s">Universitat Oberta de Catalunya · 2022 – 2024</div>
+              <p data-i18n="edu.m.d">Arquitecturas de datos, Spark, machine learning, visualización y gobierno del dato. TFM: pipeline de extremo a extremo (ingesta, ETL con Pentaho, MongoDB, modelos de predicción en Python y dashboard en Metabase).</p>
+            </div>
+            <div class="item">
+              <h3 data-i18n="edu.g.t">Grado en Administración y Dirección de Empresas</h3>
+              <div class="s" data-i18n="edu.g.s">Universidad de Granada · 2015 – 2020</div>
+            </div>
+          </div>
+        </article>
+        <article class="panel edu reveal">
+          <div class="panel-head"><span class="ttl" data-i18n="edu.h2">Certificaciones e idiomas</span></div>
+          <div class="panel-body">
+            <ul>
+              <li data-i18n="edu.c.1">Kubernetes CKA · en curso</li>
+              <li data-i18n="edu.c.2">Complete Guide to Elasticsearch · Udemy</li>
+              <li data-i18n="edu.c.3">SQL con PostgreSQL · Udemy</li>
+              <li data-i18n="edu.c.4">Inglés B2 · Aptis, British Council</li>
+              <li data-i18n="edu.l">Idiomas: español nativo · inglés B2</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="contacto" class="section contact">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="ct.eyebrow">Contacto</p>
+      <h2 class="title" data-i18n="ct.title">Si buscas a alguien que entienda el dato desde el hospital hasta el dashboard, hablamos.</h2>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/alvarocaravacaalacid" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/a7varoo" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="#contacto" data-mail="show">correo</a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="footer"></footer>
+<footer class="footer">
+  <div class="wrap">
+    <span data-i18n="ft.made">Hecho a mano con HTML, CSS y JS. Sin frameworks.</span>
+    <span>© <span data-year></span> Álvaro Caravaca Alacid</span>
+  </div>
+</footer>
 <script src="i18n.js"></script>
 <script src="app.js"></script>
 </body>
