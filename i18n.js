@@ -143,7 +143,6 @@ window.I18N = {
     "edu.l": "Languages: Spanish native · English B2",
     "ct.eyebrow": "Contact",
     "ct.title": "If you need someone who understands data from the hospital to the dashboard, let's talk.",
-    "ft.made": "Hand-made with HTML, CSS and JS. No frameworks.",
     "hero.now": "Kubernetes (CKA) · data platforms with dbt and Dagster",
     "met.p0.t": "Logs and traceability",
     "met.p0.d": "Promtail ships the logs to Loki and Grafana draws them next to the metrics, on the same time axis. When something breaks I see the spike on the chart and the exact log line for that second without leaving the panel, with a separate panel just for errors and warnings. It is the same method I use at work to follow a trace end to end: a metric tells you something is wrong, the log tells you why.",
