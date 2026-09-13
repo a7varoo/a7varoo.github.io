@@ -10,7 +10,7 @@ window.I18N = {
     "nav.contacto": "Contact",
     "hero.eyebrow": "Healthcare integration · Data · Infrastructure",
     "hero.role": "Healthcare integration engineer (HL7/FHIR) · Data platforms & observability",
-    "hero.combo": "I validate clinical messaging in hospitals running in production, I hold a master's in BI and Big Data, and I run my own infrastructure with full observability. Three things that rarely come together.",
+    "hero.combo": "I came to engineering from a business degree and an admin job I ended up automating with Python. Today I validate clinical messaging in hospitals running in production, and I build the tools I use to do it.",
     "hero.mail": "Email",
     "hero.db": "SQL and NoSQL databases",
     "tile.sites": "full control of my servers from my phone, wherever I am",
