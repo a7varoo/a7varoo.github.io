@@ -12,6 +12,7 @@ window.I18N = {
     "hero.role": "Healthcare integration engineer (HL7/FHIR) · Data platforms & observability",
     "hero.combo": "I validate clinical messaging in hospitals running in production, I hold a master's in BI and Big Data, and I run my own infrastructure with full observability. Three things that rarely come together.",
     "hero.mail": "Email",
+    "hero.db": "SQL and NoSQL databases",
     "tile.sites": "full control of my servers from my phone, wherever I am",
     "tile.services": "containerised services, operated remotely",
     "tile.alerts": "alert rules that page my phone",
