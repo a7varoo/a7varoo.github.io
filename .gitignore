@@ -1,0 +1,5 @@
+# Documentos de trabajo: no se publican (contienen datos personales).
+docs/
+
+# Lista local de tokens prohibidos para tests/check.py.
+tests/forbidden.local.txt
