@@ -126,7 +126,7 @@
     <div class="wrap">
       <p class="eyebrow" data-i18n="met.eyebrow">Observabilidad</p>
       <h2 class="title" data-i18n="met.title">La observabilidad de mi propio equipo, montada como la de un servicio en producción</h2>
-      <p class="lead" data-i18n="met.lead">Cada máquina que tengo exporta métricas y logs a un Prometheus central. Los umbrales se ajustan con historial real y las alertas llegan al móvil. Sin agentes comerciales: lo que no existía, lo escribí.</p>
+      <p class="lead" data-i18n="met.lead">Cada máquina que tengo exporta métricas a un Prometheus central y sus logs a Loki, para poder mirar las dos cosas en el mismo panel y seguir el rastro de lo que pasó. Los umbrales se ajustan con historial real y las alertas llegan al móvil. Sin agentes comerciales: lo que no existía, lo escribí.</p>
       <div class="panel reveal">
         <div class="panel-head"><span class="dot"></span><span data-i18n="met.head">pipeline · pull cada 15 s · retención 30 días</span></div>
         <div class="panel-body scroll-x">
@@ -153,7 +153,7 @@
 
             <rect class="box" x="660" y="118" width="170" height="50" rx="10"/>
             <text class="t" x="674" y="140" font-size="13">Loki</text>
-            <text x="674" y="158" font-size="11" data-i18n="met.n5s">logs</text>
+            <text x="674" y="158" font-size="11" class="a" data-i18n="met.n5s">logs · trazabilidad</text>
 
             <rect class="box" x="660" y="190" width="170" height="80" rx="10"/>
             <text class="t" x="674" y="214" font-size="13">Alertmanager</text>
@@ -175,7 +175,11 @@
           </svg>
         </div>
       </div>
-      <div class="grid-3" style="margin-top:18px">
+      <div class="grid-2" style="margin-top:18px">
+        <article class="panel reveal">
+          <div class="panel-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 11h11M4 16h14M4 21h8"/><circle cx="19" cy="19" r="3"/></svg><span class="ttl" data-i18n="met.p0.t">Logs y trazabilidad</span></div>
+          <div class="panel-body"><p data-i18n="met.p0.d">Promtail envía los logs a Loki y Grafana los pinta junto a las métricas, en el mismo eje de tiempo. Cuando algo falla veo el pico en la gráfica y el log exacto de ese segundo sin salir del panel, con un panel aparte solo para errores y warnings. Es el mismo método con el que sigo una traza de principio a fin en el trabajo: una métrica te dice que algo va mal, el log te dice por qué.</p></div>
+        </article>
         <article class="panel reveal">
           <div class="panel-head"><span class="ttl" data-i18n="met.p1.t">Dos exporters escritos por mí</span></div>
           <div class="panel-body"><p data-i18n="met.p1.d">MangoHud escribe un CSV; un script Python lo relee cada dos segundos y expone FPS, frametime, temperaturas y consumo como métricas Prometheus con label por aplicación. Otro exporter lee la biblioteca de Lutris. Los dos corren como unidades systemd.</p></div>
@@ -191,6 +195,10 @@
       </div>
       <div class="panel reveal shots" style="margin-top:18px">
         <div class="panel-head"><span class="dot"></span><span data-i18n="met.shot">grafana · capturas reales de mis dashboards</span></div>
+        <figure>
+          <img src="assets/grafana-logs.png" alt="Panel de Grafana con logs de errores y warnings consultados desde Loki" loading="lazy" width="1408" height="592">
+          <figcaption data-i18n="met.shot0">Logs desde Loki filtrados a errores y warnings, con marca de tiempo y nivel, junto a las métricas del mismo instante</figcaption>
+        </figure>
         <figure>
           <img src="assets/grafana-cpu.png" alt="Paneles de Grafana con carga de CPU global, por core y por modo, y temperaturas por sensor" loading="lazy" width="1392" height="602">
           <figcaption data-i18n="met.shot1">CPU: carga global, por core y por modo, y temperaturas por sensor, con las líneas de umbral de alerta</figcaption>

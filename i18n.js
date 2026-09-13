@@ -44,7 +44,7 @@ window.I18N = {
     "linux.svg.phone": "Full control from my phone, wherever I am",
     "met.eyebrow": "Observability",
     "met.title": "Observability for my own machines, built like a production service",
-    "met.lead": "Every machine I own exports metrics and logs to a central Prometheus. Thresholds are tuned with real history and alerts reach my phone. No commercial agents: what did not exist, I wrote.",
+    "met.lead": "Every machine I own exports metrics to a central Prometheus and its logs to Loki, so I can look at both in the same panel and follow the trail of what happened. Thresholds are tuned with real history and alerts reach my phone. No commercial agents: what did not exist, I wrote.",
     "met.head": "pipeline · pull every 15 s · 30-day retention",
     "met.n1": "Workstation",
     "met.n1s": "CachyOS · GPU",
@@ -56,7 +56,7 @@ window.I18N = {
     "met.n3s": "Orange Pi 5 · pull 15 s",
     "met.n3t": "30-day retention",
     "met.n4s": "27 panels",
-    "met.n5s": "logs",
+    "met.n5s": "logs · traceability",
     "met.n6s": "thermal · VRAM · disk",
     "met.n6t": "throttling · OOM",
     "met.n7s": "→ phone",
@@ -143,6 +143,9 @@ window.I18N = {
     "ct.eyebrow": "Contact",
     "ct.title": "If you need someone who understands data from the hospital to the dashboard, let's talk.",
     "ft.made": "Hand-made with HTML, CSS and JS. No frameworks.",
-    "hero.now": "Kubernetes (CKA) · data platforms with dbt and Dagster"
+    "hero.now": "Kubernetes (CKA) · data platforms with dbt and Dagster",
+    "met.p0.t": "Logs and traceability",
+    "met.p0.d": "Promtail ships the logs to Loki and Grafana draws them next to the metrics, on the same time axis. When something breaks I see the spike on the chart and the exact log line for that second without leaving the panel, with a separate panel just for errors and warnings. It is the same method I use at work to follow a trace end to end: a metric tells you something is wrong, the log tells you why.",
+    "met.shot0": "Logs from Loki filtered down to errors and warnings, with timestamp and level, next to the metrics for the same moment"
   }
 };
