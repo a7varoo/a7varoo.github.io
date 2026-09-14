@@ -14,6 +14,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"
+} }
+</script>
 </head>
 <body>
 <header class="topbar" id="top">
@@ -53,7 +59,13 @@
         </div>
       </div>
       <div class="hero-side">
-        <img class="hero-photo" src="assets/foto.jpg" width="176" height="176" alt="Álvaro Caravaca">
+        <div class="panel lab" id="lab">
+          <div class="panel-head"><span class="dot"></span><span class="ttl" data-i18n="hero.lab">Mi homelab: dos sitios, una red</span><span class="spacer"></span><span class="lab-hint" data-i18n="hero.labhint">gíralo</span></div>
+          <div class="lab-wrap">
+            <canvas id="lab-scene" class="lab-scene" aria-label="Homelab en 3D"></canvas>
+            <img class="hero-photo" src="assets/foto.jpg" width="176" height="176" alt="Álvaro Caravaca">
+          </div>
+        </div>
         <div class="grid-2 hero-tiles">
           <div class="tile"><div class="tile-n">24/7</div><div class="tile-l" data-i18n="tile.sites">control total de mis servidores desde el móvil, esté donde esté</div></div>
           <div class="tile"><div class="tile-n">~40</div><div class="tile-l" data-i18n="tile.services">servicios en contenedores, operados en remoto</div></div>
@@ -363,5 +375,16 @@
 </footer>
 <script src="i18n.js"></script>
 <script src="app.js"></script>
+<script type="module">
+  const lab = document.getElementById("lab"), canvas = document.getElementById("lab-scene");
+  try {
+    const { montar } = await import("./homelab3d.js");
+    if (!montar(canvas)) throw new Error("sin WebGL");
+  } catch (e) {
+    // Sin escena: la foto vuelve a su sitio y el panel desaparece.
+    lab.parentNode.prepend(lab.querySelector(".hero-photo"));
+    lab.remove();
+  }
+</script>
 </body>
 </html>

@@ -12,7 +12,7 @@ SECTIONS = ["hero", "linux", "metricas", "ia", "proyectos", "experiencia", "form
 # este fichero es público y no debe contener lo que pretende mantener fuera.
 IPV4 = re.compile(r"\b\d{1,3}(?:\.\d{1,3}){3}\b")
 PHONE = re.compile(r"\b[67]\d{2}[ .-]?\d{3}[ .-]?\d{3}\b")
-EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[A-Za-z]{2,}")
 # Tokens concretos (hostnames, etc.) en un fichero local ignorado por git.
 LOCAL_FORBIDDEN = ROOT / "tests" / "forbidden.local.txt"
 

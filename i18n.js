@@ -13,6 +13,8 @@ window.I18N = {
     "hero.combo": "I came to engineering from a business degree and an admin job I ended up automating with Python. Today I validate clinical messaging in hospitals running in production, and I build the tools I use to do it.",
     "hero.mail": "Email",
     "hero.db": "SQL and NoSQL databases",
+    "hero.lab": "My homelab: two sites, one network",
+    "hero.labhint": "drag to rotate",
     "tile.sites": "full control of my servers from my phone, wherever I am",
     "tile.services": "containerised services, operated remotely",
     "tile.alerts": "alert rules that page my phone",

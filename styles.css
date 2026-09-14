@@ -104,6 +104,11 @@ a{color:var(--accent)}
 .hero-side{display:grid;gap:18px;justify-items:center}
 .hero-photo{width:176px;height:176px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);box-shadow:0 0 0 10px rgba(95,222,208,.08),0 20px 50px rgba(0,0,0,.35)}
 .hero-tiles{width:100%}
+.lab{width:100%;overflow:hidden}
+.lab-hint{font-weight:400;font-size:11.5px}
+.lab-wrap{position:relative;aspect-ratio:1/1;background:radial-gradient(360px 220px at 50% 115%,rgba(10,107,100,.35),transparent 70%)}
+.lab-scene{width:100%;height:100%;display:block}
+.lab-wrap .hero-photo{position:absolute;left:14px;bottom:14px;width:84px;height:84px;border-width:2px;box-shadow:0 0 0 6px rgba(95,222,208,.1),0 12px 30px rgba(0,0,0,.4);pointer-events:none}
 
 /* ===== Features ===== */
 .feature .panel-body p{font-size:15.5px}
@@ -153,13 +158,11 @@ a{color:var(--accent)}
 @media (max-width:900px){
   .grid-4{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:1fr}
   .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-side{grid-template-columns:auto 1fr;align-items:center;justify-items:start}
-  .hero-photo{width:120px;height:120px}
+  .hero-side{max-width:560px;margin:0 auto;width:100%}
 }
 @media (max-width:720px){
   .grid-2{grid-template-columns:1fr} .section{padding-block:64px} body{font-size:16px}
   .lead{font-size:17px} .hero{padding-block:44px 56px} .hero-combo{font-size:17px}
-  .hero-side{grid-template-columns:1fr;justify-items:center}
   .hero-tiles{grid-template-columns:1fr 1fr;gap:12px}
   .tile{padding:14px}
   .tile-n{font-size:26px}
